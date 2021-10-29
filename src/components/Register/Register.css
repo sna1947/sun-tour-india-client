@@ -1,0 +1,17 @@
+.reg-form form{
+    display: flex;
+    flex-direction: column;
+    justify-content:center; 
+    align-items:center;
+}
+
+.reg-form form input{
+    width: 400px;
+    margin-bottom: 10px;
+}
+.reg-form{
+   background: rgb(211, 205, 205);
+   width: 450px;
+   margin: 20px;
+    
+}
