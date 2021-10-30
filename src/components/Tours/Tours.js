@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Tour from '../Tour/Tour';
 
 const Tours = () => {
@@ -20,8 +21,11 @@ const Tours = () => {
                 tours.map(tour=><Tour
                 key={tour._id}
                 tour={tour}
-                ></Tour>)
+                >
+               <Link to ={`/ordernow/${tour._Id}`} ><button>Buy Now</button></Link>
+                </Tour>)
             }
+           
             </Row>
         </div>
     );

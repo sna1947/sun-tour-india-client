@@ -34,9 +34,9 @@ function App() {
           <Route path='/home'>
             <Home></Home>
           </Route>
-          <Route path='/tour/:tourId'>
+          {/* <Route path='/tour/:tourId'>
           <Tours></Tours>
-          </Route>
+          </Route> */}
           
            {/* <Route path='/tours'>
               <Tours></Tours>
@@ -45,9 +45,13 @@ function App() {
               <Tours></Tours>
            </PrivateRoute>
 
-           <Route path='/ordernow'>
+           {/* <Route path='/ordernow/:id'>
               <OrderNow></OrderNow>
-           </Route>
+           </Route> */}
+
+           <PrivateRoute path='/ordernow/:id'>
+              <OrderNow></OrderNow>
+           </PrivateRoute>
 
           <Route path='/about'>
             <About></About>

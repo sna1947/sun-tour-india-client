@@ -3,7 +3,8 @@ import { Card, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Tour.css'
 const Tour = (props) => {
-    const {image, place, description} = props.tour;
+    const {image, place, description, _id} = props.tour;
+    console.log(props);
 
     return (
         <div className='border border-dark m-1 rounded tour-card bg-light'>
@@ -11,12 +12,10 @@ const Tour = (props) => {
                 <Card.Text>
                     <img className='card-img img-card' src={image} alt="" />
                     <h5>Place: {place}</h5>
-                    <h6>Description: {description}</h6>
+                    <h6>Description: {description.slice(0,100)}</h6>
                 </Card.Text>
-              
-               <button className='bg-warning  text-danger fw-bold rounded'>
-               <Nav.Link as={Link} to="/ordernow">Buy Nw</Nav.Link>
-                </button>
+
+                <Link to ={`/ordernow/${_id}`} ><button className='bg-warning  text-danger fw-bold rounded'>Booking Now</button></Link>
                 
             </Card.Body>
         </div>

@@ -1,7 +1,8 @@
 import React from 'react';
-import { Nav } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
+import Banner from '../Banner/Banner';
 // import useFirebase from '../../Hooks/useFirebase';
 import Logo from '../Logo/Logo';
 import './Header.css'
@@ -11,30 +12,35 @@ const Header = () => {
     // const {user, logout} = useFirebase();
     const { user, logout } = useAuth();
     return (
-        <div className='d-flex justify-content-between align-items-center bg-light p-2 m-2' >
+        <div   >
+            <Navbar sticky="top" className='d-flex justify-content-between align-items-center bg-black p-2'>
             <div className="logo d-flex justify-content-between align-items-center">
                 <Logo></Logo>
-                <span><h3>Tour India</h3></span>
+                <span><h3 className='text-info '>Tour India</h3></span>
 
             </div>
 
             <div>
-                <Nav className="ms nav justify-content-center bg-light p-3 m-2 ">
-                    <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                    <Nav.Link as={Link} to="/tours">Tours</Nav.Link>
-                    <Nav.Link as={Link} to="/About">About</Nav.Link>
+                
+                <Nav   className="ms nav justify-content-center  p-3 m-3 ">
+                    <Nav.Link className='bg  text-light fw-bold rounded ' as={Link} to="/home">Home</Nav.Link>
+
+                    <Nav.Link className='bg  text-light fw-bold rounded ms-1' as={Link} to="/tours">Tours</Nav.Link>
+                    <Nav.Link className='bg  text-light fw-bold rounded ms-1' as={Link} to="/About">About</Nav.Link>
                     {/* <Nav.Link as={Link} to="/blog">Blog</Nav.Link> */}
-                    <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
-                    <Nav.Link as={Link} to="/register">Register</Nav.Link>
+                    <Nav.Link className='bg  text-light fw-bold rounded ms-1' as={Link} to="/contact">Contact</Nav.Link>
+                    <Nav.Link className='bg text-light fw-bold rounded ms-1' as={Link} to="/register">Register</Nav.Link>
                     {
-                        user.email && <span> {user.displayName}  </span>
+                        user.email && <span className='text-warning'> {user.displayName}  </span>
                     }
                     {
-                        user.email ? <Nav.Link onClick={logout} to="/login">Log Out</Nav.Link> : <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                        user.email ? <Nav.Link className='bg  text-light fw-bold rounded ms-1' onClick={logout} to="/login">Log Out</Nav.Link> : <Nav.Link className='bg text-light fw-bold rounded ms-1' as={Link} to="/login">Login</Nav.Link>
                     }
                 </Nav>
+                
             </div>
-
+            </Navbar>
+            
         </div>
     );
 };

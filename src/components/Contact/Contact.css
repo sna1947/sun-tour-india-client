@@ -1,0 +1,20 @@
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+    justify-content:center; 
+    align-items:center;
+}
+
+.contact-form form input{
+    width: 400px;
+    margin-bottom: 10px;
+}
+.contact-form{
+   background: rgb(211, 205, 205);
+   width: 450px;
+   margin: 20px;
+    
+}
+.address{
+    width: 400px;
+}
