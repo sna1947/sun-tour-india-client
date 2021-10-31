@@ -16,6 +16,9 @@ import initializeAuthencation from './Firebase/firebase.initialize';
 import LogOut from './components/LogOut/LogOut';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import TourDetails from './components/TourDetails/TourDetails';
+import OrderPlace from './components/OrderPlace/OrderPlace';
+import UpdateOrders from './components/UpdateOrders/UpdateOrders';
 
 initializeAuthencation();
 
@@ -44,15 +47,21 @@ function App() {
            <PrivateRoute path='/tours'>
               <Tours></Tours>
            </PrivateRoute>
+           <Route path='/tourdetails'>
+             <TourDetails></TourDetails>
+           </Route>
 
-           {/* <Route path='/ordernow/:id'>
+
+           {/* <Route path='/ordernow'>
               <OrderNow></OrderNow>
            </Route> */}
 
            <PrivateRoute path='/ordernow/:id'>
               <OrderNow></OrderNow>
            </PrivateRoute>
-
+            <Route path='/orderplace'>
+              <OrderPlace></OrderPlace>
+            </Route>
           <Route path='/about'>
             <About></About>
           </Route>
@@ -63,6 +72,10 @@ function App() {
           {/* <Route path='/blog'>
             <Blog></Blog>
           </Route> */}
+
+          <Route path='/updateorders/:id'>
+            <UpdateOrders></UpdateOrders>
+          </Route>
 
           <Route path='/contact'>
             <Contact></Contact>

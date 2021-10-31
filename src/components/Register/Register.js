@@ -9,9 +9,9 @@ const Register = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
     return (
-        <div className=' d-flex container align-items-center align-items-center' >
+        <div className='bgc d-flex  align-items-center align-items-center' >
 
-            <div className=' reg-form rounded p-3 ms-5'>
+            <div className='bgc reg-form rounded p-3 ms-5 border border-light shadow-lg    rounded'>
                 <h1>Please Register</h1>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input  {...register("example")} placeholder='Name' />

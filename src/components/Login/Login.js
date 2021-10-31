@@ -27,7 +27,7 @@ const Login = () => {
 
         <div className="row bgc">
             <div className="col-lg-6 m-auto mt-5">
-                <div className=' reg-form rounded p-3'>
+                <div className=' reg-form rounded p-3 shadow-lg mb-5  rounded border border-light'>
                     <h1>Please Login With Google</h1>
                     <i className="fab fa-google bg-warning p-3 m-1 fs-3 fa-bold rounded text-danger"></i> <br />
                     <button onClick={handleGoogleLogin} className='m-2 rounded text-light fw-bold fs-5 border-0 bg-primary p-1'> Google signin</button>

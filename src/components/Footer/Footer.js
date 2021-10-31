@@ -12,7 +12,7 @@ const Footer = () => {
                         Rajasthan<br />
                         Sikkim<br />
                         Tamil Nadu<br />
-                        dWest Bengal
+                        West Bengal
                     </p>
                 </div>
                 <div className="col-lg-4">
@@ -47,7 +47,7 @@ const Footer = () => {
 
             <hr className='text-info fw-bold' />
 
-            <h4 className='text-light'>Incredible India</h4>
+            <h4 className='text-light'>Sun Tour India</h4>
             <p className='text-light'>India has a myriad of landscapes, great heritage and culture, varied flora and fauna. The country is the most preferred tourist destinations for tourists from all across the world for its picturesque landscapes, spectacular waterfalls, habitat of the country's largest tiger reserve and home to the warmest people on earth.</p>
 
             <hr className='text-info fw-bold' />

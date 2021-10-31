@@ -9,20 +9,22 @@ const Tours = () => {
     const [tours, setTours] = useState([]);
     useEffect(()=>{
         fetch('http://localhost:5000/tourProducts')
+        // fetch('https://fast-beach-64529.herokuapp.com/tourProducts')
         .then(res => res.json())
         .then(data => setTours(data))
     },[])
     return (
-        <div className='container '>
+        <div className='container bgc'>
 
             {/* <h3>tours: {tours.length}</h3> */}
             <Row xs={1} md={3} >
             {
                 tours.map(tour=><Tour
+                
                 key={tour._id}
                 tour={tour}
                 >
-               <Link to ={`/ordernow/${tour._Id}`} ><button>Buy Now</button></Link>
+               <Link to ={`/ordernow/${tour._id}`} ><button>Buy Now</button></Link>
                 </Tour>)
             }
            

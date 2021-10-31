@@ -9,6 +9,7 @@ const OrderNow = () => {
 
     useEffect(()=>{
         const url = `http://localhost:5000/ordernow/${id}`;
+        // const url = `https://fast-beach-64529.herokuapp.com/ordernow/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data =>setOrdernow(data) )
@@ -25,7 +26,10 @@ console.log(ordernow);
             
             <Link to ={'/home'} >
                 <button className='bg-warning  text-danger fw-bold rounded'>Go to Home Page</button>
-                </Link>
+            </Link>
+            <Link to ={'/orderplace'} >
+                <button className=' m-2 bg-warning  text-danger fw-bold rounded'>Book Now</button>
+            </Link>
         </div>
     );
 };

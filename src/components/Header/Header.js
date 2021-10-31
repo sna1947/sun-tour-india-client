@@ -25,7 +25,7 @@ const Header = () => {
                 <Nav   className="ms nav justify-content-center  p-3 m-3 ">
                     <Nav.Link className='bg  text-light fw-bold rounded ' as={Link} to="/home">Home</Nav.Link>
 
-                    <Nav.Link className='bg  text-light fw-bold rounded ms-1' as={Link} to="/tours">Tours</Nav.Link>
+                    <Nav.Link className='bg  text-light fw-bold rounded ms-1' as={Link} to="/tours">Services</Nav.Link>
                     <Nav.Link className='bg  text-light fw-bold rounded ms-1' as={Link} to="/About">About</Nav.Link>
                     {/* <Nav.Link as={Link} to="/blog">Blog</Nav.Link> */}
                     <Nav.Link className='bg  text-light fw-bold rounded ms-1' as={Link} to="/contact">Contact</Nav.Link>

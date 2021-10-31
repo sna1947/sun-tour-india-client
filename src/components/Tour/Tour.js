@@ -15,7 +15,7 @@ const Tour = (props) => {
                     <h6>Description: {description.slice(0,100)}</h6>
                 </Card.Text>
 
-                <Link to ={`/ordernow/${_id}`} ><button className='bg-warning  text-danger fw-bold rounded'>Booking Now</button></Link>
+                <Link to ={`/ordernow/${_id}`} ><button className='bg-warning  text-danger fw-bold rounded'>See Details</button></Link>
                 
             </Card.Body>
         </div>
