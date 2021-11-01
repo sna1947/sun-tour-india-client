@@ -3,7 +3,7 @@ import { Card, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Tour.css'
 const Tour = (props) => {
-    const {image, place, description, _id} = props.tour;
+    const {image, place, price, description, _id} = props.tour;
     console.log(props);
 
     return (
@@ -12,6 +12,7 @@ const Tour = (props) => {
                 <Card.Text>
                     <img className='card-img img-card' src={image} alt="" />
                     <h5>Place: {place}</h5>
+                    <h5>Price: {price}</h5>
                     <h6>Description: {description.slice(0,100)}</h6>
                 </Card.Text>
 

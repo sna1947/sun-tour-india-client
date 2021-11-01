@@ -25,6 +25,7 @@ const OrderPlace = () => {
             })
             .then(res=>res.json())
             .then(data=>{
+                console.log(data);
                 if(data.insertedId){
                     alert('successfully added your Order.')
                     e.target.reset();
