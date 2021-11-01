@@ -8,7 +8,8 @@ const OrderNow = () => {
     const {id} = useParams();
 
     useEffect(()=>{
-        const url = `http://localhost:5000/ordernow/${id}`;
+        
+        const url = `https://fast-beach-64529.herokuapp.com/ordernow/${id}`;
         // const url = `https://fast-beach-64529.herokuapp.com/ordernow/${id}`;
         fetch(url)
         .then(res => res.json())

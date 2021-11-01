@@ -19,6 +19,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import TourDetails from './components/TourDetails/TourDetails';
 import OrderPlace from './components/OrderPlace/OrderPlace';
 import UpdateOrders from './components/UpdateOrders/UpdateOrders';
+import AddTravel from './components/AddTravel/AddTravel';
 
 initializeAuthencation();
 
@@ -49,6 +50,10 @@ function App() {
            </PrivateRoute>
            <Route path='/tourdetails'>
              <TourDetails></TourDetails>
+           </Route>
+
+           <Route path='/addtravel'>
+             <AddTravel></AddTravel>
            </Route>
 
 

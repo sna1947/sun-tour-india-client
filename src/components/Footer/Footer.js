@@ -1,8 +1,8 @@
 import React from 'react';
 import './Footer.css'
 const Footer = () => {
-    return (
-        <div className='bg-black  p-3'>
+    return ( 
+        <div className='bg-black  p-3 '>
             <div className="row">
                 <div className="col-lg-4">
                     <p className='text-light'>

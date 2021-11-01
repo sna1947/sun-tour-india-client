@@ -10,6 +10,7 @@ const OrderPlace = () => {
     const placeRef = useRef();
 
     const handelAddOrder =(e)=>{
+        e.prventDefault();
             const name = nameRef.current.value;
             const email = emailRef.current.value;
             const address = addressRef.current.value;
@@ -17,7 +18,7 @@ const OrderPlace = () => {
             
             const newOrder = { name, email, place, address };
 
-            fetch('http://localhost:5000/orders',{
+            fetch('https://fast-beach-64529.herokuapp.com/orders',{
                 method:'POST',
                 headers:{ 'content-type' : 'application/json'},
                 body:JSON.stringify(newOrder)
@@ -30,23 +31,22 @@ const OrderPlace = () => {
                 }
             })
 
-            e.prventDefault();
+           
     };
     //**My booking================================================ */
     const [orders, setOrders] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/orders')
+        fetch('https://fast-beach-64529.herokuapp.com/orders')
         .then(res => res.json())
         .then(data => setOrders(data))
     },[]);
 
     // DELETE USER ========================
-    const handelDeleteOrder = id =>{
-
+    const handelDeleteOrder = (id) =>{
        const proceed = window.confirm("Want to Delete ????");
        if(proceed){
-        const url = `http://localhost:5000/orders/${id}`;
+        const url = `https://fast-beach-64529.herokuapp.com/orders/${id}`;
         fetch(url, {
             method:'DELETE'
         })
@@ -59,13 +59,11 @@ const OrderPlace = () => {
             }
         })
        }
-
-        
     };
 
-
     return (
-        <div>
+        <div className='m-3'>
+            <h1 className='text-info bg-success container p-2 '>Manage All Order</h1>
             {/* SUBMIT FORM============== */}
             <div className="row">
                 <div className="col-lg-6 className= container reg-form rounded">
